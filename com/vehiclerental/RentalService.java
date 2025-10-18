@@ -16,13 +16,13 @@ public class RentalService {
             if (v.getModel().equalsIgnoreCase(model) && v.isAvailable()) {
                 v.setAvailable(false);
 
-                // Use subclass-specific calculation (handles discounts for Bikes and the insurrance rates for Vans)
+                // Use subclass-specific calculation (handles discounts for Bikes)
                 double cost = v.calculateRentalCost(days);
 
                 rentalRecords.add(new RentalRecord(customer, v, days, cost));
-                return  """
-                        Vehicle rented successfully!
-                        Model: """ + v.getModel() + "\n" +
+                return """
+                       \u2705 Vehicle rented successfully!
+                       Model: """ + v.getModel() + "\n" +
                        "Days: " + days + "\n" +
                        "Total Cost: Ksh " + cost;
             }

@@ -4,15 +4,17 @@ public class RentalRecord {
     private final Customer customer;
     private final Vehicle vehicle;
     private final int days;
-    private final double cost;
+    private final double totalCost;
 
-    public RentalRecord(Customer customer, Vehicle vehicle, int days, double cost) {
+    // Constructor
+    public RentalRecord(Customer customer, Vehicle vehicle, int days, double totalCost) {
         this.customer = customer;
         this.vehicle = vehicle;
         this.days = days;
-        this.cost = cost;
+        this.totalCost = totalCost;
     }
 
+    // Getters
     public Customer getCustomer() {
         return customer;
     }
@@ -25,12 +27,25 @@ public class RentalRecord {
         return days;
     }
 
-    public double getCost() {
-        return cost;
+    public double getTotalCost() {
+        return totalCost;
     }
 
+    // Method to display a record nicely
     public void printCustomerRecord() {
-        System.out.println("Vehicle: " + vehicle.getModel() + " \t | Customer: " + customer.getName() + " \t| Days: " + days +" \t| Total Cost: Ksh " + cost
-        );
+        System.out.println("-------------------------------------");
+        System.out.println("Customer: " + customer.getName());
+        System.out.println("Vehicle: " + vehicle.getModel());
+        System.out.println("Days: " + days);
+        System.out.println("Total Cost: Ksh " + totalCost);
+        System.out.println("-------------------------------------");
+    }
+
+    @Override
+    public String toString() {
+        return "Customer: " + customer.getName() +
+               " | Vehicle: " + vehicle.getModel() +
+               " | Days: " + days +
+               " | Total Cost: Ksh " + totalCost;
     }
 }
