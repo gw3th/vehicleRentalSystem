@@ -2,25 +2,14 @@
 
 ---
 
-## 🚗 Vehicle Rental System
 
-A **Java Object-Oriented Programming (OOP)** project that simulates a simple vehicle rental service — allowing users to view, rent, and return **cars, bikes, and vans**.
-It demonstrates key OOP principles such as **encapsulation**, **inheritance**, **abstraction**, and **polymorphism**.
-
----
-
-### 🧠 **Project Overview**
-
-This project models a vehicle rental system with two user interfaces:
-
-* A **Console-based version** (`Main.java`)
-* A **Graphical User Interface (GUI)** (`RentalUI.java`) built using **Java Swing**
 
 Users can:
 
 * View available vehicles
 * Rent a vehicle (cars, bikes, or vans)
 * Return previously rented vehicles
+* View rental history
 
 ---
 
@@ -38,17 +27,17 @@ Users can:
 ### 🧱 **Project Structure**
 
 ```
-VehicleRentalSystem/
+vehicleRentalSystemTUI-main/
 │
-├── src/
+├── vehicleRentalSystemTUI-main/
 │   └── com/vehiclerental/
-│       ├── Vehicle.java          # Abstract base class
+│       ├── Vehicle.java          # Abstract base class(parent class)
 │       ├── Car.java              # Car subclass
 │       ├── Bike.java             # Bike subclass
 │       ├── Van.java              # Van subclass
 │       ├── Customer.java         # Customer entity
 │       ├── RentalService.java    # Core business logic
-|       ├── RentalRecord.java     # Handling the records
+|       ├── RentalRecord.java     # Handling the rental records
 │       └── Main.java             # Console interface
 │       
 │
@@ -67,7 +56,10 @@ VehicleRentalSystem/
 
 #### 🧩 Compile
 
-From the `src i.e the folder containing com/vehiclerental` directory:
+From a terminal;
+From the `vehicleRentalSystemTUI-main i.e the folder containing com/vehiclerental` directory: (run; cd vehicleRentalSystemTUI-main)
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/32c1f745-25be-4969-bf18-5b12364db41a" />
+
 
 ```bash
 javac -d ../out com/vehiclerental/*.java
