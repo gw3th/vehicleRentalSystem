@@ -30,8 +30,8 @@ Users can:
 * 🧬 **Inheritance:** `Car`, `Bike`, and `Van` inherit from the abstract `Vehicle` class
 * 🎭 **Polymorphism:** Each vehicle type overrides `calculateRentalCost()`
 * 🧩 **Abstraction:** `Vehicle` defines the contract for all vehicle types
-* 🪟 **User Interface:** Simple, intuitive GUI with buttons, colors, and dynamic updates
-* 🧾 **Data Tracking:** Maintains available and rented vehicles in real-time
+* 🪟 **User Interface:** Simple, intuitive TUI with buttons, colors, and dynamic updates
+* 🧾 **Data Tracking:** Maintains available and rented vehicles in real-time by using arrays
 
 ---
 
@@ -67,7 +67,7 @@ VehicleRentalSystem/
 
 #### 🧩 Compile
 
-From the `src` directory:
+From the `src i.e the folder containing com/vehiclerental` directory:
 
 ```bash
 javac -d ../out com/vehiclerental/*.java
