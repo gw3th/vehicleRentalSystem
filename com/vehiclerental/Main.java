@@ -10,6 +10,7 @@ public class Main {
 
         // adding sample vehicles to the system
         service.addVehicle(new Car("Toyota Corolla", 5000));
+        service.addVehicle(new Car("Toyota Corolla", 5000));
         service.addVehicle(new Car("Toyota Supra MK4", 16000));
         service.addVehicle(new Car("Toyota Prado TX", 7000));
         service.addVehicle(new Car("Honda Civic", 5500));

@@ -48,14 +48,9 @@ VehicleRentalSystem/
 │       ├── Van.java              # Van subclass
 │       ├── Customer.java         # Customer entity
 │       ├── RentalService.java    # Core business logic
-<<<<<<< HEAD
 |       ├── RentalRecord.java     # Handling the records
 │       └── Main.java             # Console interface
 │       
-=======
-│       ├── Main.java             # Console interface
-│       └── RentalUI.java         # Swing GUI interface
->>>>>>> b54e7900c8a4f69ffc954676f7ee45f2c6011c92
 │
 ├── out/                         # Compiled .class files (after build)
 └── README.md                    # Project documentation
@@ -63,47 +58,6 @@ VehicleRentalSystem/
 
 ---
 
-<<<<<<< HEAD
-=======
-### 🧩 **Class Diagram (Simplified)**
-
-```
-          +----------------------+
-          |      Vehicle         |  ← abstract
-          +----------------------+
-          | - model: String      |
-          | - pricePerDay: double|
-          | - available: boolean |
-          +----------------------+
-          | + getModel()         |
-          | + calculateRentalCost() (abstract)
-          +----------------------+
-                   ▲
-        ┌──────────┼──────────┐
-        │           │          │
-   +---------+  +--------+  +--------+
-   |   Car   |  |  Bike  |  |  Van   |
-   +---------+  +--------+  +--------+
-
-   +----------------------------------+
-   |        RentalService             |
-   +----------------------------------+
-   | + addVehicle()                   |
-   | + listAvailableVehicles()        |
-   | + rentVehicle() / returnVehicle()|
-   +----------------------------------+
-
-   +------------------------+
-   |       Customer         |
-   +------------------------+
-   | + getName()            |
-   | + equals(), hashCode()  |
-   +------------------------+
-```
-
----
-
->>>>>>> b54e7900c8a4f69ffc954676f7ee45f2c6011c92
 ### 🖥️ **How to Compile and Run**
 
 #### 🧰 Prerequisites
@@ -119,64 +73,10 @@ From the `src` directory:
 javac -d ../out com/vehiclerental/*.java
 ```
 
-<<<<<<< HEAD
 Run Console Version
-=======
-#### ▶️ Run Console Version
->>>>>>> b54e7900c8a4f69ffc954676f7ee45f2c6011c92
 
 ```bash
 java -cp ../out com.vehiclerental.Main
 ```
 
-<<<<<<< HEAD
-=======
-#### 🪟 Run GUI Version
-
-```bash
-java -cp ../out com.vehiclerental.RentalUI
-```
-
----
-
-### 🚘 **Default Vehicles Loaded**
-
-| Type | Model              | Price (KES/day) |
-| ---- | ------------------ | --------------- |
-| Car  | Toyota Corolla     | 5000            |
-| Car  | Honda Civic        | 5500            |
-| Car  | BMW 320i           | 9500            |
-| Car  | Mercedes-Benz C180 | 10500           |
-| Car  | Audi A4            | 11000           |
-| Bike | Yamaha MT-07       | 1500            |
-| Bike | Bajaj Pulsar       | 700             |
-| Bike | Kawasaki Ninja 250 | 2500            |
-| Van  | Nissan Caravan     | 8000            |
-| Van  | Toyota Hiace       | 8500            |
-| Van  | Mercedes Sprinter  | 12000           |
-
----
-
-### 👨‍💻 **Developed Using**
-
-* **Language:** Java
-* **Concepts:** OOP, Polymorphism, Inheritance, Encapsulation, Abstraction
-* **Libraries:** Java Swing (GUI), java.util (Collections)
-
----
-
-### 📚 **Educational Value**
-
-This project is an excellent demonstration of:
-
-* Applying OOP principles in real-world scenarios
-* Managing class hierarchies and abstraction
-* Building GUIs using Java Swing
-* Maintaining logical data relationships (customer ↔ vehicle rentals)
-
-
-
-
-
->>>>>>> b54e7900c8a4f69ffc954676f7ee45f2c6011c92
 

@@ -30,15 +30,17 @@ public class RentalService {
         return "Vehicle not available or model not found!";
     }
 
-    public String returnVehicle(Customer customer) {
-        for (RentalRecord r : rentalRecords) {
-            if (r.getCustomer().getName().equalsIgnoreCase(customer.getName())) {
-                r.getVehicle().setAvailable(true);
-                return "Vehicle returned successfully for " + customer.getName() + "!";
-            }
+ public String returnVehicle(Customer customer) {
+    for (RentalRecord r : rentalRecords) {
+        if (r.getCustomer().getName().equalsIgnoreCase(customer.getName()) && !r.isReturned()) {
+            r.getVehicle().setAvailable(true);
+            r.setReturned(true); // Update record status
+            return "Vehicle returned successfully for " + customer.getName() + "!";
         }
-        return "No record found for customer: " + customer.getName();
     }
+    return "No active rental found for customer: " + customer.getName();
+}
+
 
     public void viewAllRecords() {
         if (rentalRecords.isEmpty()) {
